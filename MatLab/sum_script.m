@@ -3,7 +3,6 @@ dimen = size(temp);
 n=dimen(2);
 
 sum = 0;
-
 for i=1 : n
   sum = sum + temp(i);  
 end
