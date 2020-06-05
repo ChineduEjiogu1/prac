@@ -48,17 +48,40 @@ void Student::changeMajor(const string& newMajor)
 
 int main()
 {
-    Person person("Mary", "12-345");
-    person.print();
-    cout << endl;
+    // Person person("Mary", "12-345");
+    // person.print();
+    // cout << endl;
     
-    Student student("Bob", "98-764", "Math", 2012);
-    student.changeMajor("English");
-    student.print();
-    cout << endl;
+    // Student student("Bob", "98-764", "Math", 2012);
+    // student.changeMajor("English");
+    // student.print();
+    // cout << endl;
     
-    Student* s = new Student("Carol", "34-927", "Physics", 2014);
-    s -> print();
+    // Student* s = new Student("Carol", "34-927", "Physics", 2014);
+    // s -> print();
 
-   return 0;
+
+
+    Person* pp[100];
+    pp[0] = new Person("Alexis", "42-395");
+    pp[1] = new Student("Clark", "07-256", "Physics", 2014);
+    // cout << "\n";
+    // pp[0] -> print();
+    // cout << "\n";
+    
+
+    Student* sp = dynamic_cast<Student*>(pp[1]);
+    sp -> changeMajor("Chemistry");
+
+    // for(int i =0; i < 100; i++){
+    //     Student *sp = dynamic_cast<Student*>(pp[i]);
+    //     if(sp != NULL){
+    //         sp -> changeMajor("Undecided");
+    //     }
+    // }
+
+    pp[1] -> print();
+
+    return 0;
+
 }
